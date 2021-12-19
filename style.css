@@ -1,0 +1,433 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&family=Roboto:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  margin: auto;
+  overflow-y: scroll;
+  font-family: "Montserrat", sans-serif;
+}
+
+button {
+  font-family: "Fira Sans", sans-serif;
+}
+
+h2 {
+  padding: 10px 0 0 30px;
+}
+
+p {
+  padding: 10px 30px 30px 30px;
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+}
+
+i {
+  padding: 10px;
+}
+
+.pink-text {
+  color: #be6968;
+}
+
+/* --text that completes the animated logo (start)-- */
+.logo-text-1 {
+  border: flex;
+  position: absolute;
+  font-size: 40px;
+  bottom: 40%;
+  left: 42%;
+  color: #4d5959;
+}
+
+.logo-text-2 {
+  border: flex;
+  position: absolute;
+  font-size: 16px;
+  bottom: 36%;
+  left: 52%;
+
+  color: #68bebf;
+}
+/* --text that completes the animated logo (End)-- */
+
+/*positions and calls the "shake" keyframe (start)*/
+.icon-animation {
+  position: relative;
+  margin: 40px 65px 40px 90px;
+
+  width: 20em;
+  height: 20em;
+  animation-duration: 2.5s;
+  animation-delay: 1s;
+  animation-name: shake;
+  animation-iteration-count: 1;
+  transform-origin: center;
+  animation-timing-function: linear;
+}
+/*positions and calls the "shake" keyframe (end)*/
+
+/* makes the face of logo shake (start)*/
+@keyframes shake {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  3% {
+    transform: rotate(45deg);
+  }
+  5% {
+    transform: rotate(-45deg);
+  }
+
+  7% {
+    transform: rotate(0deg);
+  }
+
+  9% {
+    transform: rotate(45deg);
+  }
+  11% {
+    transform: rotate(-45deg);
+  }
+
+  13% {
+    transform: rotate(0deg);
+  }
+}
+/* makes the face of logo shake (start)*/
+
+/* parent class element of animated logo "controls the whole animated logo" (start)*/
+.logo-header {
+  display: flex;
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  width: 50rem;
+  border-radius: 100px;
+  background-color: rgba(253, 253, 253, 0.925);
+  animation-duration: 0.8s;
+  animation-delay: 3s;
+  animation-name: translate;
+  animation-iteration-count: 1;
+  z-index: 1;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+/* parent class element of animated logo "controls the whole animated logo" (end)*/
+
+/* translate the animated logo in the Y axis outside of view */
+@keyframes translate {
+  100% {
+    position: absolute;
+    transform: translateY(-110vh);
+  }
+}
+
+/* build the whole animated face logo in css */
+.main-circle {
+  position: relative;
+  top: 25%;
+
+  right: 25%;
+
+  background: #4d5959;
+  width: 50%;
+  height: 50%;
+  border-radius: 50% 50% 50% 50%;
+}
+
+/* .left-eye class is the eye that winks */
+.left-eye {
+  top: 65%;
+  left: 54%;
+  background: #68bebf;
+  width: 12%;
+  height: 12%;
+  border-radius: 50%;
+  animation-duration: 0.1s;
+  animation-delay: 1.9s;
+  animation-name: wink;
+  animation-iteration-count: 1;
+  transform-origin: 0% 0%;
+  animation-timing-function: linear;
+  transform: rotate(180deg);
+}
+
+/* animated the wink action */
+@keyframes wink {
+  0% {
+    width: 12%;
+  }
+  100% {
+    width: 1%;
+  }
+}
+
+.right-eye {
+  top: 30%;
+  left: 41%;
+  background: #68bebf;
+  width: 12%;
+  height: 12%;
+  border-radius: 50%;
+}
+
+.mouth {
+  border: 0.3px solid transparent;
+  border-bottom: 10px solid #ffffff;
+  width: 80%;
+  height: 100%;
+  left: -9%;
+  bottom: 0%;
+  transform: rotate(270deg);
+  border-radius: 50%;
+}
+
+.right-cheek {
+  border: 7px solid, transparent;
+  border-bottom: 6px solid #ffffff;
+  width: 10%;
+  height: 0%;
+  left: 42%;
+  bottom: 81%;
+  transform: rotate(90deg);
+}
+
+.left-cheek {
+  border: 7px solid, transparent;
+  border-bottom: 6px solid #ffffff;
+  width: 10%;
+  height: 0%;
+  left: 42%;
+  bottom: 16%;
+  transform: rotate(90deg);
+}
+
+.icon-animation * {
+  position: absolute;
+}
+/* hero image of work space */
+.hero {
+  width: 100%;
+  height: 97.5vh;
+
+  background-color: white;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("images/studio.jpg");
+  background-size: cover;
+  align-items: center;
+}
+
+.custom-shape-divider-bottom-1639889983 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1639889983 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 123px;
+}
+
+.custom-shape-divider-bottom-1639889983 .shape-fill {
+  fill: #ffffff;
+}
+
+/* styling navigation bar (Start)*/
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 5%;
+  height: 15vh;
+  width: 100%;
+}
+
+.nav-links {
+  list-style: none;
+  padding-right: 110px;
+}
+
+.nav-links .nav-li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.nav-links .nav-li .nav-a {
+  color: white;
+  text-decoration: none;
+  font-family: "Fira Sans", sans-serif;
+  font-size: 16px;
+  transition: all 0.3s ease 0s;
+}
+
+.nav-links .nav-li .nav-a:hover {
+  color: #be6968;
+}
+
+.nav-logo {
+  cursor: pointer;
+  height: 15vh;
+}
+
+button {
+  padding: 9px 25px;
+  background-color: #bf6968;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  color: white;
+}
+
+button:hover {
+  background-color: #bf6a6891;
+}
+/* styling navigation bar (End)*/
+
+/* Introductory Mission statement*/
+.introduction {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 10% 22%;
+  color: white;
+  text-align: center;
+}
+/* --End of Hero class flexbox content-- */
+
+/* --doctors content start-- */
+.doctors-title {
+  font-size: 40px;
+  color: #be6968;
+}
+
+.doctors {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  margin: 150px 50px;
+  padding: 5px 15vh;
+}
+
+.doctor-photo {
+  padding: 100px 40px;
+  width: 35%;
+}
+
+.doctor-1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  transform: translateX(400%);
+  transition: transform 0.9s ease;
+}
+
+.doctor-1.show {
+  transform: translateX(0);
+}
+
+.doctor-1-info {
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+  margin-top: 60px;
+}
+
+.doctor-2 {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  transform: translateX(-400%);
+  transition: transform 0.9s ease;
+}
+
+.doctor-2.show {
+  transform: translateX(0);
+}
+
+.doctor-2-info {
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+  margin-top: 60px;
+}
+
+/* --doctors content End--*/
+
+/* -----Footer content (Start)----- */
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 50px 10px 0;
+  background: #000000;
+  color: white;
+}
+
+/* Flexbox of contact informatio */
+.info {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  margin: 10px;
+  font-size: 6px;
+}
+
+.footer-header {
+  font-size: 20px;
+  color: #be6968;
+}
+
+.social-media-icons {
+  font-size: 35px;
+  color: #be6968;
+  padding-left: 30px;
+  cursor: pointer;
+}
+
+/* --Footer content (end)-- */
+
+@media (max-width: 751px) {
+  .hero {
+    width: 100%;
+    height: 70vh;
+    background-color: white;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+      url("images/studio.jpg");
+    background-size: cover;
+    align-items: center;
+  }
+
+  .introduction {
+    text-align: center;
+    flex-direction: column;
+    padding: 5px 0px;
+  }
+
+  .mission-statement {
+    padding: 20px 40px;
+  }
+}
+
+@media (max-width: 751px) {
+  .doctors {
+    text-align: center;
+    flex-direction: column;
+    padding: 0px 40px;
+  }
+}
